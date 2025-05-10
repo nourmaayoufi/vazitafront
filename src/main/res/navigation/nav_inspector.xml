@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_inspector"
+    app:startDestination="@id/carQueueFragment">
+
+    <fragment
+        android:id="@+id/carQueueFragment"
+        android:name="com.inspection.ui.inspector.queue.CarQueueFragment"
+        android:label="Car Queue"
+        tools:layout="@layout/fragment_car_queue">
+        <action
+            android:id="@+id/action_carQueueFragment_to_defectFormActivity"
+            app:destination="@id/defectFormActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/defectFormActivity"
+        android:name="com.inspection.ui.inspector.form.DefectFormActivity"
+        android:label="Defect Form"
+        tools:layout="@layout/activity_defect_form">
+        <argument
+            android:name="dossierNumber"
+            app:argType="string" />
+        <argument
+            android:name="chassisNumber"
+            app:argType="string" />
+        <argument
+            android:name="registrationNumber"
+            app:argType="string" />
+    </activity>
+</navigation>

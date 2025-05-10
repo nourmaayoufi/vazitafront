@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vehicle Inspection</string>
+
+    <!-- Auth -->
+    <string name="hint_username">Nom d\'utilisateur</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="btn_login">Connexion</string>
+    <string name="error_invalid_credentials">Identifiants invalides</string>
+    <string name="error_empty_fields">Veuillez remplir tous les champs</string>
+    <string name="login_progress">Connexion en cours…</string>
+
+    <!-- Navigation Titles -->
+    <string name="title_dashboard">Tableau de bord</string>
+    <string name="title_queue">File d\'attente</string>
+    <string name="title_defect_form">Formulaire de défaut</string>
+    <string name="title_chapter_selection">Sélection du chapitre</string>
+    <string name="title_point_selection">Sélection du point</string>
+    <string name="title_alteration_selection">Sélection de l\'altération</string>
+    <string name="title_form_summary">Résumé du formulaire</string>
+    <string name="title_user_management">Gestion des utilisateurs</string>
+    <string name="title_user_detail">Détails de l\'utilisateur</string>
+    <string name="title_user_create_edit">Création/Modification d\'utilisateur</string>
+    <string name="title_defect_review">Révision des défauts</string>
+    <string name="title_defect_detail">Détails du défaut</string>
+    <string name="title_defect_edit">Modification du défaut</string>
+    <string name="title_analytics">Analytiques</string>
+    <string name="title_chart">Graphique</string>
+    <string name="title_filter">Filtrer</string>
+
+    <!-- General -->
+    <string name="btn_save">Enregistrer</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_next">Suivant</string>
+    <string name="btn_previous">Précédent</string>
+    <string name="btn_submit">Soumettre</string>
+    <string name="btn_add">Ajouter</string>
+    <string name="btn_edit">Modifier</string>
+    <string name="btn_delete">Supprimer</string>
+    <string name="btn_search">Rechercher</string>
+    <string name="btn_filter">Filtrer</string>
+    <string name="btn_clear">Effacer</string>
+    <string name="btn_logout">Déconnexion</string>
+    <string name="btn_retry">Réessayer</string>
+
+    <!-- Car Queue -->
+    <string name="queue_empty">Aucun véhicule dans la file d\'attente</string>
+    <string name="car_register_number">Immatriculation: %1$s</string>
+    <string name="car_chassis_number">Numéro de châssis: %1$s</string>
+    <string name="car_register_time">Heure d\'enregistrement: %1$s</string>
+    <string name="car_piste">Piste: %1$s</string>
+
+    <!-- Defect Form -->
+    <string name="chapitre_title">Chapitre</string>
+    <string name="point_title">Point de défaut</string>
+    <string name="alteration_title">Altération</string>
+    <string name="form_summary_title">Résumé des défauts</string>
+    <string name="form_submit_success">Formulaire soumis avec succès</string>
+    <string name="form_submit_error">Erreur lors de la soumission du formulaire</string>
+    <string name="form_empty_defects">Aucun défaut sélectionné</string>
+
+    <!-- User Management -->
+    <string name="user_fullname">Nom complet: %1$s %2$s</string>
+    <string name="user_group">Groupe: %1$s</string>
+    <string name="user_center">Centre: %1$s</string>
+    <string name="user_create_success">Utilisateur créé avec succès</string>
+    <string name="user_update_success">Utilisateur mis à jour avec succès</string>
+    <string name="user_delete_success">Utilisateur supprimé avec succès</string>
+    <string name="user_delete_confirmation">Êtes-vous sûr de vouloir supprimer cet utilisateur?</string>
+    <string name="hint_firstname">Prénom</string>
+    <string name="hint_lastname">Nom</string>
+    <string name="hint_user_group">Groupe</string>
+    <string name="hint_start_date">Date de début</string>
+    <string name="hint_end_date">Date de fin</string>
+    <string name="hint_status">Statut</string>
+
+    <!-- Defect Review -->
+    <string name="defect_date">Date: %1$s</string>
+    <string name="defect_car_info">Véhicule: %1$s - %2$s</string>
+    <string name="defect_code">Code défaut: %1$s</string>
+    <string name="defect_inspector">Inspecteur: %1$s</string>
+    <string name="defect_update_success">Défaut mis à jour avec succès</string>
+    <string name="defect_filter_title">Filtrer les défauts</string>
+    <string name="hint_date_from">Date de début</string>
+    <string name="hint_date_to">Date de fin</string>
+    <string name="hint_inspector">Inspecteur</string>
+    <string name="hint_car_type">Type de véhicule</string>
+
+    <!-- Analytics -->
+    <string name="analytics_time_period">Période: %1$s - %2$s</string>
+    <string name="analytics_car_type">Type de véhicule: %1$s</string>
+    <string name="analytics_center">Centre: %1$s</string>
+    <string name="analytics_most_common">Défauts les plus fréquents</string>
+    <string name="analytics_trend">Tendance sur la période</string>
+    <string name="analytics_distribution">Distribution par type</string>
+    <string name="analytics_export">Exporter les données</string>
+    <string name="analytics_filter_title">Filtrer les analytiques</string>
+    <string name="analytics_period_daily">Journalier</string>
+    <string name="analytics_period_weekly">Hebdomadaire</string>
+    <string name="analytics_period_monthly">Mensuel</string>
+    <string name="analytics_period_yearly">Annuel</string>
+    <string name="analytics_no_data">Aucune donnée disponible pour la période sélectionnée</string>
+
+    <!-- Error Messages -->
+    <string name="error_network">Erreur de connexion au réseau</string>
+    <string name="error_server">Erreur serveur</string>
+    <string name="error_timeout">Délai d\'attente dépassé</string>
+    <string name="error_unknown">Une erreur inconnue est survenue</string>
+    <string name="error_authentication">Erreur d\'authentification</string>
+    <string name="error_permission">Vous n\'avez pas les permissions nécessaires</string>
+</resources>
