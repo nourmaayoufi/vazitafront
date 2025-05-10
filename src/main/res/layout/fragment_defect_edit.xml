@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_defect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewVehicleInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewVehicleInfoTitle"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vehicle_information"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDossierLabel"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/dossier_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewVehicleInfoTitle" />
+
+            <TextView
+                android:id="@+id/textViewDossierValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewDossierLabel"
+                app:layout_constraintTop_toTopOf="@+id/textViewDossierLabel"
+                tools:text="2023000123" />
+
+            <TextView
+                android:id="@+id/textViewChassisLabel"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/chassis_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDossierLabel" />
+
+            <TextView
+                android:id="@+id/textViewChassisValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewChassisLabel"
+                app:layout_constraintTop_toTopOf="@+id/textViewChassisLabel"
+                tools:text="WVWZZZ1KZAM046247" />
+
+            <TextView
+                android:id="@+id/textViewPlateLabel"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/plate_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChassisLabel" />
+
+            <TextView
+                android:id="@+id/textViewPlateValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewPlateLabel"
+                app:layout_constraintTop_toTopOf="@+id/textViewPlateLabel"
+                tools:text="123456 AB 78" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDefectEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewVehicleInfo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewDefectTitle"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defect_information"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewChapterLabel"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/chapter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDefectTitle" />
+
+            <Spinner
+                android:id="@+id/spinnerChapter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewChapterLabel" />
+
+            <TextView
+                android:id="@+id/textViewPointLabel"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/point"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerChapter" />
+
+            <Spinner
+                android:id="@+id/spinnerPoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPointLabel" />
+
+            <TextView
+                android:id="@+id/textViewAlterationLabel"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/alteration"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPoint" />
+
+            <Spinner
+                android:id="@+id/spinnerAlteration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAlterationLabel" />
+
+            <TextView
+                android:id="@+id/textViewCodeLabel"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/defect_code"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerAlteration" />
+
+            <TextView
+                android:id="@+id/textViewCodeValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewCodeLabel"
+                app:layout_constraintTop_toTopOf="@+id/textViewCodeLabel"
+                tools:text="235" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewDefectEdit" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSave"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewDefectEdit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

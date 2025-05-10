@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_adjoint"
+    app:startDestination="@id/adjointDashboardFragment">
+
+    <fragment
+        android:id="@+id/adjointDashboardFragment"
+        android:name="com.inspection.ui.adjoint.dashboard.AdjointDashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_adjoint_dashboard" >
+        <action
+            android:id="@+id/action_adjointDashboardFragment_to_adjointDefectReviewFragment"
+            app:destination="@id/adjointDefectReviewFragment" />
+        <action
+            android:id="@+id/action_adjointDashboardFragment_to_analyticsDashboardFragment"
+            app:destination="@id/analyticsDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adjointDefectReviewFragment"
+        android:name="com.inspection.ui.adjoint.defects.AdjointDefectReviewFragment"
+        android:label="@string/title_defect_review"
+        tools:layout="@layout/fragment_defect_review" >
+        <action
+            android:id="@+id/action_adjointDefectReviewFragment_to_defectDetailFragment"
+            app:destination="@id/defectDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/defectDetailFragment"
+        android:name="com.inspection.ui.admin.defects.DefectDetailFragment"
+        android:label="@string/title_defect_detail"
+        tools:layout="@layout/fragment_defect_detail" >
+        <argument
+            android:name="defectId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_defectDetailFragment_to_defectEditFragment"
+            app:destination="@id/defectEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/defectEditFragment"
+        android:name="com.inspection.ui.admin.defects.DefectEditFragment"
+        android:label="@string/title_defect_edit"
+        tools:layout="@layout/fragment_defect_edit" >
+        <argument
+            android:name="defectId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/analyticsDashboardFragment"
+        android:name="com.inspection.ui.admin.analytics.AnalyticsDashboardFragment"
+        android:label="@string/title_analytics"
+        tools:layout="@layout/fragment_analytics_dashboard" >
+        <action
+            android:id="@+id/action_analyticsDashboardFragment_to_chartFragment"
+            app:destination="@id/chartFragment" />
+        <action
+            android:id="@+id/action_analyticsDashboardFragment_to_analyticsFilterFragment"
+            app:destination="@id/analyticsFilterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.inspection.ui.admin.analytics.ChartFragment"
+        android:label="@string/title_chart"
+        tools:layout="@layout/fragment_chart" >
+        <argument
+            android:name="chartType"
+            app:argType="string" />
+        <argument
+            android:name="chartData"
+            app:argType="com.inspection.data.model.AnalyticsData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/analyticsFilterFragment"
+        android:name="com.inspection.ui.admin.analytics.AnalyticsFilterFragment"
+        android:label="@string/title_filter"
+        tools:layout="@layout/fragment_analytics_filter" />
+</navigation>

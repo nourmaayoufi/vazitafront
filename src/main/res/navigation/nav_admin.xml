@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/adminDashboardFragment">
+
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.inspection.ui.admin.dashboard.AdminDashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_admin_dashboard">
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_userManagementFragment"
+            app:destination="@id/userManagementFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_defectReviewFragment"
+            app:destination="@id/defectReviewFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_analyticsDashboardFragment"
+            app:destination="@id/analyticsDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userManagementFragment"
+        android:name="com.inspection.ui.admin.users.UserManagementFragment"
+        android:label="User Management"
+        tools:layout="@layout/fragment_user_management">
+        <action
+            android:id="@+id/action_userManagementFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+        <action
+            android:id="@+id/action_userManagementFragment_to_userCreateEditFragment"
+            app:destination="@id/userCreateEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.inspection.ui.admin.users.UserDetailFragment"
+        android:label="User Details"
+        tools:layout="@layout/fragment_user_detail">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_userDetailFragment_to_userCreateEditFragment"
+            app:destination="@id/userCreateEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userCreateEditFragment"
+        android:name="com.inspection.ui.admin.users.UserCreateEditFragment"
+        android:label="Create/Edit User"
+        tools:layout="@layout/fragment_user_create_edit">
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/defectReviewFragment"
+        android:name="com.inspection.ui.admin.defects.DefectReviewFragment"
+        android:label="Defect Review"
+        tools:layout="@layout/fragment_defect_review">
+        <action
+            android:id="@+id/action_defectReviewFragment_to_defectDetailFragment"
+            app:destination="@id/defectDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/defectDetailFragment"
+        android:name="com.inspection.ui.admin.defects.DefectDetailFragment"
+        android:label="Defect Details"
+        tools:layout="@layout/fragment_defect_detail">
+        <argument
+            android:name="dossierNumber"
+            app:argType="string" />
+        <argument
+            android:name="defectCode"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_defectDetailFragment_to_defectEditFragment"
+            app:destination="@id/defectEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/defectEditFragment"
+        android:name="com.inspection.ui.admin.defects.DefectEditFragment"
+        android:label="Edit Defect"
+        tools:layout="@layout/fragment_defect_edit">
+        <argument
+            android:name="dossierNumber"
+            app:argType="string" />
+        <argument
+            android:name="defectCode"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/analyticsDashboardFragment"
+        android:name="com.inspection.ui.admin.analytics.AnalyticsDashboardFragment"
+        android:label="Analytics Dashboard"
+        tools:layout="@layout/fragment_analytics_dashboard">
+        <action
+            android:id="@+id/action_analyticsDashboardFragment_to_chartFragment"
+            app:destination="@id/chartFragment" />
+        <action
+            android:id="@+id/action_analyticsDashboardFragment_to_analyticsFilterFragment"
+            app:destination="@id/analyticsFilterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.inspection.ui.admin.analytics.ChartFragment"
+        android:label="Chart Details"
+        tools:layout="@layout/fragment_chart">
+        <argument
+            android:name="chartType"
+            app:argType="string" />
+        <argument
+            android:name="chartTitle"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/analyticsFilterFragment"
+        android:name="com.inspection.ui.admin.analytics.AnalyticsFilterFragment"
+        android:label="Filters"
+        tools:layout="@layout/fragment_analytics_filter" />
+
+</navigation>
